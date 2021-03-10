@@ -18,3 +18,18 @@ For example:
 ```
 ./scripts/make-sdcard.sh /dev/sdg picluster1 ~/.ssh/picluster_rsa.pub
 ```
+
+## Check connectivity (and inventory)
+
+```
+ansible nodes -m ping -u pi -i inventory/hosts.yml
+```
+
+## Update OS
+
+```
+ansible-playbook -i inventory/hosts.yml update.yml
+```
+
+## Installing kubernetes
+Use: https://github.com/k3s-io/k3s-ansible
