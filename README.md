@@ -31,5 +31,11 @@ ansible nodes -m ping -u pi -i inventory/hosts.yml
 ansible-playbook -i inventory/hosts.yml update.yml
 ```
 
+## Shutdown cluster
+```
+ansible-playbook -i inventory/hosts.yml shutdown.yml
+```
+
+
 ## Installing kubernetes
 Use: https://github.com/k3s-io/k3s-ansible
